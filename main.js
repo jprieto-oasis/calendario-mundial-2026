@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     filteredMatches.forEach((match, index) => {
       const card = createMatchCard(match);
-      card.style.animationDelay = \`\${index * 0.1}s\`;
+      card.style.animationDelay = `${index * 0.1}s`;
       scheduleContainer.appendChild(card);
     });
   };
