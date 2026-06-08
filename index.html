@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mundial 2026 | Calendario y TV</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <div class="header-content">
+          <h1>🏆 Mundial 2026</h1>
+          <p>El calendario definitivo con canales de TV en México y opciones de VPN gratis.</p>
+        </div>
+        <div class="glass-bg"></div>
+      </header>
+
+      <main class="container">
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="mexico">México</button>
+          <button class="filter-btn" data-filter="free">TV Abierta (MX)</button>
+        </div>
+
+        <div id="schedule" class="schedule-grid">
+          <!-- Los partidos se cargarán aquí dinámicamente -->
+        </div>
+      </main>
+
+      <footer>
+        <p>Aplicación no oficial. Creado para los verdaderos fans del fútbol. ⚽</p>
+      </footer>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
