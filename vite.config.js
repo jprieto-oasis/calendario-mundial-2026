@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/mundial-2026/',
+  base: '/calendario-mundial-2026/',
 })

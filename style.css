@@ -273,6 +273,43 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes borderGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
 .match-card {
+  position: relative;
+  z-index: 1;
   animation: fadeIn 0.5s ease-out forwards;
+}
+
+.match-card::before {
+  content: "";
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  background: linear-gradient(45deg, var(--accent-color), var(--free-color), var(--vpn-color), #ec4899, var(--accent-color));
+  background-size: 400% 400%;
+  z-index: -1;
+  border-radius: 18px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: borderGlow 3s ease infinite;
+}
+
+.match-card:hover::before {
+  opacity: 1;
+}
+
+.team-flag {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.6));
+  animation: float 4s ease-in-out infinite;
 }
